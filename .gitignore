@@ -4,3 +4,6 @@
 
 /.vs/MembershipWebApp/config/applicationhost.config
 /MembershipWebApp/obj/Debug
+/.vs/MembershipWebApp/v16
+/MembershipWebApp/bin
+/packages
