@@ -1,0 +1,38 @@
+﻿@model MembershipWebApp.Models.LoginUser
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Login</td>
+            <td>@Html.TextBoxFor(m => m.Login)</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>@Html.TextBoxFor(m => m.Password)</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Login" />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" id="btn-anonymous-login" value="Anonymous login" />
+            </td>
+        </tr>
+    </table>
+}
+
+@section scripts {
+    <script>
+        $('#btn-anonymous-login').click(function () {
+            $('[name="Login"]').val('seb');
+            $('[name="Password"]').val('tototiti');
+            document.forms[0].submit();
+        });
+        //$(document).ready(function () {
+        //    alert('toto');
+        //});
+    </script>
+}

@@ -1,0 +1,23 @@
+﻿@model MembershipWebApp.Models.LoginUser
+@{
+    ViewBag.Title = "Créer utilisateur";
+}
+
+@using (Html.BeginForm("CreateUser", "Home", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Login</td>
+            <td>@Html.TextBoxFor(m => m.Login)</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>@Html.TextBoxFor(m => m.Password)</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Créer l'utilisateur" />
+            </td>
+        </tr>
+    </table>
+}
